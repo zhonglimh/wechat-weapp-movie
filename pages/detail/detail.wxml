@@ -1,0 +1,61 @@
+<loading hidden="{{loading}}">
+  客观请等待...
+</loading>
+<!-- 概要 -->
+<view class="movie-details">
+  <view class="movie-cover">
+    <image class="cover" src="{{movieDetail.img}}"></image>
+  </view>
+  <view class="movie-synopsis">
+    <view class="movie-title">
+      <text>{{movieDetail.nm}}</text>
+    </view>
+    <view class="movie-brief">{{movieDetail.scm}}</view>
+    <view class="movie-rating" wx:if="{{!movieDetail.preSale}}">
+      <view class="rating">
+        <view style="width: {{movieDetail.sc * 10}}%" class="star"></view>
+      </view>
+      <text class="num">{{movieDetail.sc}}</text>
+    </view>
+    <view class="movie-brief">{{movieDetail.cat}}</view>
+    <view class="movie-brief">{{movieDetail.src}} / {{movieDetail.dur}}分钟</view>
+    <view class="movie-brief">{{movieDetail.rt}}</view>
+    <view class="movie-brief" wx:if="{{movieDetail.preSale}}">
+      <text class="wish">{{movieDetail.wish}}人想看</text>{{movieDetail.showInfo}}
+    </view>
+
+  </view>
+</view>
+<!-- 介绍 -->
+<view class="movie-desc">
+  <view class="title">剧情介绍</view>
+  <view class="{{!desc?'desc-limit':'desc-limit-show'}}"><text>{{movieDesc}}</text></view>
+  <view class="desc-button" wx:if="{{!desc}}" bindtap="showDesc">展开</view>
+  <view class="desc-button" wx:elif="{{desc}}" bindtap="hideDesc">关闭</view>
+</view>
+<!-- 剧照 -->
+<view class="movie-photos">
+  <view class="title">剧照</view>
+  <scroll-view scroll-x="true" style="width: 100%" scroll-left="0">
+    <block wx:for="{{movieThumbs}}" wx:key="index">
+      <image class="photo" src="{{item}}" data-index="{{index}}" bindtap="showAlbum"></image>
+    </block>
+  </scroll-view>
+</view>
+<!-- 影评 -->
+<view class="movie-comments">
+  <view class="title">热门影评</view>
+  <view class="movie-comment" wx:for="{{movieComment.hcmts}}" wx:key="userId">
+    <image class="avatar" src="{{item.avatarurl}}"></image>
+    <view><text class="name">{{item.nickName}}</text><text class="time">{{item.time}}</text></view>
+    <text>{{item.content}}</text>
+  </view>
+</view>
+<!-- 声明 -->
+<view class="movie-footer">
+  数据来源：猫眼电影（表示感谢）
+</view>
+<!-- 购票 -->
+<view class="movie-buy">
+  <text class="btn-buy" bindtap="buyTickets">立即购票</text>
+</view>

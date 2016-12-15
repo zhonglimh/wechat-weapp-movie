@@ -1,0 +1,82 @@
+/* BUTTON */
+.ui-btn{
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  padding: 10rpx 0;
+  text-align: center;
+  border-radius: 4px;
+  box-sizing:border-box;
+  transform: translateY(-50%);
+}
+.ui-btn-red{
+  border: 1px solid #ff4d64;
+  color: #ff4d64;
+}
+.ui-btn-blue{
+  border: 1px solid #37b7ff;
+  color: #37b7ff;
+}
+
+/* LIST */
+.list-item{
+  position: relative;
+  background: linear-gradient(180deg,#e1e1e1,#e1e1e1 50%,transparent 0) 0 0/100% 1px no-repeat;
+  font-size: 12px;
+}
+.list-info{
+  padding: 30rpx;
+}
+.list-thumb{
+  float: left;
+  position: relative;
+  margin-right: 10px;
+}
+.list-thumb .thumb{
+  width: 130rpx;
+  height: 180rpx;
+}
+.list-content{
+  margin-right: 90rpx;
+  padding-right: 10px;
+}
+.list-title{
+  font-size: 18px;
+  line-height: 46rpx;
+}
+.list-brief{
+  height: 44rpx;
+  line-height: 44rpx;
+  color: #8a869e;
+}
+.list-title, .list-brief{
+	text-overflow: ellipsis;
+	white-space: nowrap;
+  overflow: hidden;
+}
+.list-brief .wish{
+  margin-right: 5px;
+  color: #fea54c;
+}
+.list-brief .rating{
+  float: left;
+  margin-top: 10rpx;
+  margin-right: 4px;
+  background-image: url(../../images/i_star.png);
+}
+.list-brief .star{
+  background-image: url(../../images/i_stars.png);
+}
+.list-brief .rating, .list-brief .star{
+   width: 100rpx;
+   height: 20rpx;
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+.list-sale{
+  position: absolute;
+  right: 30rpx;
+  top: 50%;
+  width: 90rpx;
+}

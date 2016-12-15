@@ -1,0 +1,10 @@
+<loading hidden="{{loading}}">
+  客观请等待...
+</loading>
+<swiper class="swiper-container" duration="400" current="{{photoIndex}}">
+  <block wx:for="{{moviePhotos}}" wx:key="index">
+    <swiper-item>
+      <image src="{{item}}" mode="aspectFit" bindlongtap="showActionSheet" data-largeSrc="{{item}}"></image>
+    </swiper-item>
+  </block>
+</swiper>

@@ -1,0 +1,35 @@
+body{
+  font-family: -apple-system-font,Helvetica Neue,Helvetica,sans-serif;
+}
+image{
+  vertical-align: middle;
+}
+
+/* ICON */
+.i-play, .i-type-3D, .i-type-3DIMAX{
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.i-play{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 40rpx;
+  height: 40rpx;
+  margin-left: -20rpx;
+  margin-top: -20rpx;
+  background-image: url(../../images/i_play.png);
+}
+.i-type-3D, .i-type-3DIMAX{
+  display: inline-block;
+  height: 14px;
+  margin-left: 4px;
+}
+.i-type-3D{
+  width: 17px;
+  background-image: url(../../images/i_3d.png);
+}
+.i-type-3DIMAX{
+  width: 44px;
+  background-image: url(../../images/i_3dimax.png);
+}

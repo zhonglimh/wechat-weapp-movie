@@ -1,0 +1,31 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/detail/detail",
+    "pages/album/album",
+    "pages/user/user"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "black",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "color": "#8a869e",
+    "selectedColor": "#ff4d64",
+    "borderStyle": "white",
+    "backgroundColor": "#f7f7f7",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "iconPath": "images/i_film.png",
+      "selectedIconPath": "images/i_film_hl.png",
+      "text": "近期热映"
+    }, {
+      "pagePath": "pages/user/user",
+      "iconPath": "images/i_contact.png",
+      "selectedIconPath": "images/i_contact_hl.png",
+      "text": "用户中心"
+    }]
+  },
+  "debug": true
+}

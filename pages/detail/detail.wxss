@@ -1,0 +1,150 @@
+/* DETAIL */
+.movie-details{
+  display: flex;
+  position: relative;
+  padding: 30rpx;
+  margin-bottom: 40rpx;
+  background: #175782;
+  font-size: 12px;
+  color: #fff;
+}
+.movie-synopsis{
+  flex: 1;
+}
+.movie-cover{
+  position: relative;
+  margin-right: 10px;
+}
+.movie-cover .cover{
+  width: 244rpx;
+  height: 340rpx;
+}
+.movie-title{
+  font-size: 18px;
+  line-height: 46rpx;
+}
+.movie-brief{
+  height: 44rpx;
+  line-height: 44rpx;
+}
+.movie-title, .movie-brief{
+	text-overflow: ellipsis;
+	white-space: nowrap;
+  overflow: hidden;
+}
+.movie-brief .wish{
+  margin-right: 4px;
+  color: #fea54c;
+}
+.movie-rating{
+  margin-bottom: 20rpx;
+  font-size: 14px;
+  line-height: 30rpx;
+}
+.movie-rating .rating{
+  float: left;
+  margin-right: 6px;
+  background-image: url(../../images/i_star.png);
+}
+.movie-rating .star{
+  background-image: url(../../images/i_stars.png);
+}
+.movie-rating .rating, .movie-rating .star{
+   width: 150rpx;
+   height: 30rpx;
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+.movie-desc{
+  padding: 0 30rpx;
+  margin-bottom: 40rpx;
+  font-size: 14px;
+  line-height: 2;
+  background: linear-gradient(180deg,#e1e1e1,#e1e1e1 50%,transparent 0) 0 bottom/100% 1px no-repeat;
+  
+}
+.movie-desc .title{
+  margin-bottom: 20rpx;
+  font-size: 14px;
+  font-weight: 700;
+}
+.movie-desc .desc-limit{
+  height: 84px;
+  overflow: hidden;
+}
+.movie-desc .desc-button{
+  padding: 40rpx;
+  text-align: center;
+}
+
+.movie-photos{
+  padding: 0 30rpx 50rpx 30rpx;
+  margin-bottom: 40rpx;
+  background: linear-gradient(180deg,#e1e1e1,#e1e1e1 50%,transparent 0) 0 bottom/100% 1px no-repeat;
+  line-height: 2;
+  white-space:nowrap;
+  overflow: hidden;
+}
+.movie-photos .title{
+  margin-bottom: 30rpx;
+  font-size: 14px;
+  font-weight: 700;
+}
+.movie-photos .photo{
+  width: 90px;
+  height: 70px;
+  margin-right: 4px;
+}
+
+.movie-comments{
+  padding: 0 30rpx;
+  font-size: 13px;
+  line-height: 2;
+}
+.movie-comments .title{
+  margin-bottom: 30rpx;
+  font-size: 14px;
+  font-weight: 700;
+}
+.movie-comment{
+  position: relative;
+  padding-left: 80rpx;
+  padding-bottom: 30rpx;
+  margin-bottom: 40rpx;
+  background: linear-gradient(180deg,#e1e1e1,#e1e1e1 50%,transparent 0) 0 bottom/100% 1px no-repeat;
+}
+.movie-comment .avatar{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 60px;
+}
+.movie-comment .time{
+  float:right;
+  color: gray;
+}
+
+.movie-footer{
+  font-size: 13px;
+  text-align: center;
+  margin-bottom: 160rpx;
+}
+
+.movie-buy{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background:#fff linear-gradient(180deg,#e1e1e1,#e1e1e1 50%,transparent 0) 0 0/100% 1px no-repeat;
+  text-align: center;
+}
+.movie-buy .btn-buy{
+  display: block;
+  margin: 20rpx 30rpx;
+  background-color: #ff4d64;
+  font-size: 20px;
+  line-height: 80rpx;
+  color: #fff;
+  border-radius: 4px;
+}

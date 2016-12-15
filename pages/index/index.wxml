@@ -1,0 +1,37 @@
+<loading hidden="{{loading}}">
+  客观请等待...
+</loading>
+<scroll-view class="container" style="height: {{windowHeight}}px;" scroll-y="true" bindscrolltolower="onPullDownRefresh" lower-threshold="{{scrollTop}}">
+  <view class="list-item" wx:for="{{movies}}" wx:key="id">
+    <navigator class="list-info" url="../detail/detail?title=navigate&id={{item.id}}">
+      <view class="list-thumb">
+        <image class="thumb" src="{{item.img}}"></image>
+        <icon class="i-play"></icon>
+      </view>
+      <view class="list-content">
+        <view class="list-title">
+          <text>{{item.nm}}</text>
+          <icon class="i-type-3DIMAX" wx:if="{{item.imax && item['3d']}}"></icon>
+          <icon class="i-type-3D" wx:elif="{{item['3d']}}"></icon>
+        </view>
+        <view class="list-brief" wx:if="{{!item.preSale}}">
+          <view class="rating">
+            <view style="width: {{item.sc * 10}}%" class="star"></view>
+          </view>{{item.sc}}
+        </view>
+        <view class="list-brief" wx:if="{{item.preSale}}">
+          <text class="wish">{{item.wish}}人想看</text>
+          <text>| {{item.showInfo}}</text>
+        </view>
+        <view class="list-brief">{{item.scm}}</view>
+        <view class="list-brief">{{item.star}}</view>
+      </view>
+    </navigator>
+    <view class="list-sale">
+      <text class="ui-btn {{!item.preSale ? 'ui-btn-red' : 'ui-btn-blue'}}" bindtap="buyTickets">
+        <block wx:if="{{!item.preSale}}">购票</block>
+        <block wx:if="{{item.preSale}}">预售</block>
+      </text>
+    </view>
+  </view>
+</scroll-view>
